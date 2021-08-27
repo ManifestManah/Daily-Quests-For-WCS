@@ -1,0 +1,28 @@
+"Phrases"
+{
+	"Daily Quest Reward Race"
+	{
+		"#format"		"{1:i}"
+		"en"			"{green}[WCS] {default}You completed the daily quest and your current race was awarded with {lightgreen}{1} levels{default}."
+		"da"			"{green}[WCS] {default}Du klarede daily questen derfor fik din nuværende race {lightgreen}{1} levels{default}."
+	}
+
+	"Daily Quest Reward Bank"
+	{
+		"#format"		"{1:i}"
+		"en"			"{green}[WCS] {default}You completed the daily quest and you were awarded with {lightgreen}{1} levels{default} to your level bank."
+		"da"			"{green}[WCS] {default}Du klarede daily questen derfor blev {lightgreen}{1} levels{default} sat ind i din level bank."
+	}
+
+	"Daily Quest Already Completed"
+	{
+		"en"			"{green}[WCS] {default}You have already completed the {lightgreen}daily quest{default} today."
+		"da"			"{green}[WCS] {default}Du har allerede færdiggjort {lightgreen}daily questen{default} i dag."
+	}
+
+	"Daily Quest Unlocks Later"
+	{
+		"en"			"{green}[WCS] {default}The daily quest will be available again {lightgreen}tomorrow{default}."
+		"da"			"{green}[WCS] {default}Daily questen vil først kunne klares igen {lightgreen}i morgen{default}."
+	}
+}
