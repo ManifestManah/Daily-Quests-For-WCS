@@ -79,6 +79,7 @@ public void OnPluginStart()
 	LoadTranslations("custom_WCS_DailyQuest.phrases");
 }
 
+
 // This happens when the map is loaded 
 public void OnMapStart()
 {
@@ -103,28 +104,34 @@ public void OnClientCookiesCached(int client)
 
 public Action AcceptDailyQuest(int client, int args)
 {
+	// If the player matches our criterias for validation then execute this section
 	if (IsValidClient(client)) 
 	{
 		// Save current date in variable
 		FormatTime(StartDate, sizeof(StartDate), "%Y%m%d");
 
+		// If there are not set a reset date yet, then execute this section
 		if (StrEqual(ResetDate[client], ""))
 		{
+			// Calls upon our GrantDailyQuestReward function
 			GrantDailyQuestReward(client);
 
 			return Plugin_Handled;
 		}
 
-
-		if (StringToInt(StartDate) - StringToInt(ResetDate[client]) == 1)
+		// If 1 day or more has passed then execute this section
+		if (StringToInt(StartDate) - StringToInt(ResetDate[client]) >= 1)
 		{
+			// Calls upon our GrantDailyQuestReward function
 			GrantDailyQuestReward(client);
 
 			return Plugin_Handled;
 		}
 
+		// Elsewise execute this section
 		else
 		{
+			// Sends two messages in the chat to the player, letting the player know the daily quest only can be done once a day
 			CPrintToChat(client, "%t", "Daily Quest Already Completed");
 			CPrintToChat(client, "%t", "Daily Quest Unlocks Later");
 
